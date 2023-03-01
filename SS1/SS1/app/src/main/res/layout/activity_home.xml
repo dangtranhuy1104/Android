@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:text="FPT wyuiq qoeyqo jakhdajk askjhda akjshda kjhsad  qwoieuqo afjahf adlha aldjha aljd"
+        android:textColor="#F61100"
+        android:textSize="30sp"
+        android:background="@drawable/background_gradient"
+        android:textStyle="italic|bold"
+        android:gravity="center"
+        android:layout_margin="20dp"
+        />
+    <Button
+        android:id="@+id/btLogin"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:paddingTop="5dp"
+        android:background="@drawable/press_drawable"
+        android:text="LOGIN" />
+    <ImageView
+        android:id="@+id/ivCover"
+        android:layout_width="400dp"
+        android:layout_height="200dp"
+        android:background="#000"
+        android:scaleType="centerCrop"
+        android:src="@drawable/funny1"/>
+    <EditText
+        android:id="@+id/edUsername"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:hint="Username"/>
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:hint="Password"
+        android:inputType="textPassword"/>
+    <CheckBox
+        android:id="@+id/ckPrivacy"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:text="Toi dong y"/>
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <RadioButton
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:text="Male"/>
+        <RadioButton
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:text="Female"/>
+    </RadioGroup>
+
+
+</LinearLayout>
