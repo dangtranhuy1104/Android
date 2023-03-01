@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="3"
+    android:background="@color/black">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.25"
+        android:scaleType="centerCrop"
+        android:src="@drawable/poster" />
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.75"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:weightSum="10"
+            android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:weightSum="6"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="18+"
+                            android:gravity="center"
+                            android:background="@drawable/tag_background"
+                            android:textColor="@color/white"
+                            android:textSize="20dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"/>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.5"
+                            android:text="Action"
+                            android:gravity="center"
+                            android:background="@drawable/tag_background"
+                            android:textColor="@color/white"
+                            android:textSize="18dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginLeft="5dp" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.25"
+                        android:background="@drawable/tag_background"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:background="@drawable/star"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginLeft="5dp"/>
+
+                        <TextView
+                            android:layout_width="39dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center-vertical"
+                            android:text="5.0"
+                            android:textColor="@color/white"
+                            android:textSize="18dp" />
+
+                    </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:gravity="center">
+
+                            <TextView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:background="@drawable/plus"
+                                android:gravity="center" />
+
+                            <TextView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:gravity="center"
+                                    android:background="@drawable/send"
+                                    android:textColor="@color/white"
+                                    android:textSize="20sp"
+                                android:layout_marginLeft="17dp"/>
+                        </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="5"
+                    android:orientation="vertical"
+                    android:weightSum="10">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:text="Angel Has Fallen"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            android:textSize="20dp"
+                            android:gravity="center_vertical"
+                            android:layout_marginTop="10dp"
+                            android:layout_weight="3"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:text="Mike Banning is framed for the attempted assassination of the President and must evade his own agency and the FBI as he tries to uncover the real threat. After the events in the previous film, Secret Service..."
+                            android:textColor="@color/white"
+                            android:textSize="15dp"
+                            android:gravity="center_vertical"
+                            android:layout_weight="6" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="6"
+                    android:orientation="vertical"
+                    android:weightSum="10">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:text="Actor"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            android:textSize="20dp"
+                            android:gravity="center_vertical"
+                            android:layout_marginTop="10dp"
+                            android:layout_weight="2"/>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="8"
+                            android:orientation="horizontal"
+                            android:weightSum="4">
+                                <ImageView
+                                    android:layout_width="0dp"
+                                    android:layout_height="100dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/tag_background"
+                                    android:src="@drawable/dienvien1"
+                                    android:scaleType="centerCrop"
+                                    android:layout_marginRight="15dp"/>
+                                <ImageView
+                                    android:layout_width="0dp"
+                                    android:layout_height="100dp"
+                                    android:layout_weight="1"
+                                    android:src="@drawable/dienvien2"
+                                    android:scaleType="centerCrop"
+                                    android:layout_marginRight="15dp"/>
+                                <ImageView
+                                    android:layout_width="0dp"
+                                    android:layout_height="100dp"
+                                    android:layout_weight="1"
+                                    android:src="@drawable/dienvien4"
+                                    android:scaleType="centerCrop"
+                                    android:layout_marginRight="15dp"/>
+                                <ImageView
+                                    android:layout_width="0dp"
+                                    android:layout_height="100dp"
+                                    android:layout_weight="1"
+                                    android:src="@drawable/dienvien3"
+                                    android:scaleType="centerCrop"
+                                    />
+                        </LinearLayout>
+                </LinearLayout>
+        </LinearLayout>
+</LinearLayout>

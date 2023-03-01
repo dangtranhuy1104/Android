@@ -1,67 +1,75 @@
 package com.example.dangtranhuy_t2011e;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
-import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.dangtranhuy.adepter.EmployeeAdapter;
 import com.example.dangtranhuy_t2011e.database.AppDatabase;
-import com.example.dangtranhuy_t2011e.database.EmployeeEntity;
+import com.example.dangtranhuy_t2011e.database.Employee;
 
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+
+    EditText edName, edDes, edSalary;
+    Button btAdd, btUp, btDele;
     AppDatabase db;
+
+    RecyclerView rvEmployee;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         db = AppDatabase.getAppDatabase(this);
 
-        insertEmployee();
+        edName = findViewById(R.id.edName);
+        edDes = findViewById(R.id.edDes);
+        edSalary = findViewById(R.id.edSalary);
+        btAdd = findViewById(R.id.btAdd);
+        btUp= findViewById(R.id.btUp);
+        btDele = findViewById(R.id.btDel);
+        btAdd.setOnClickListener(this);
+        btUp.setOnClickListener(this);
+        btDele.setOnClickListener(this);
 
-        updateEployee(2);
+        List<Employee> list = db.employeeDao().getAllEmployee();
 
-        getAllEmployee();
+        EmployeeAdapter adapter = new EmployeeAdapter(this, list);
 
-        findEmployee(1);
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this, RecyclerView.VERTICAL, false);
 
-
-    }
-    private void insertEmployee() {
-        EmployeeEntity bm = new EmployeeEntity();
-        bm.employee = "this is Employee";
-        bm.designation = "this is designation";
-        bm.salary = "this is salary";
-        db.employeeDao().insertEmployee(bm);
-    }
-    private void updateEployee(int id) {
-        EmployeeEntity bm = db.employeeDao().getEmployee(id);
-        bm.employee = "this is employee update";
-        db.employeeDao().updateEmployee(bm);
-    }
-    private  void findEmployee(int id){
-        EmployeeEntity model = db.employeeDao().getEmployee(id);
-        Log.d("TAG","Find Employee with id:"+model.id + "title: "+model.employee);
+        rvEmployee = findViewById(R.id.rvEmployee);
+        rvEmployee.setLayoutManager(layoutManager);
+        rvEmployee.setAdapter(adapter);
     }
 
-    private void deleteBookmark(int id){
-        EmployeeEntity model = db.employeeDao().getEmployee(id);
-        db.employeeDao().deleteEmployee(model);
+    private void onAddEmployee(){
+        Employee employee = new Employee();
+        employee.nameEmployee = edName.getText().toString();
+        employee.des= edDes.getText().toString();
+        employee.salary = edSalary.getText().toString();
+        long id = db.employeeDao().insertEmployee(employee);
+        if (id > 0) {
+            Toast.makeText(this, "Success", Toast.LENGTH_SHORT).show();
+        }
     }
 
-    private void deleteAllEmployee(){
-        db.employeeDao().deleteAll();
-    }
-
-    private void getAllEmployee() {
-        List<EmployeeEntity> list = db.employeeDao().getAllEmployee();
-        for (EmployeeEntity model : list){
-            Log.d("TAG", "id: "+model.id + "employee: "+model.employee);
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.btAdd:
+                onAddEmployee();
+                break;
+            default:
+                break;
         }
     }
 }
-
-
-

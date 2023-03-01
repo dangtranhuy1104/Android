@@ -30,7 +30,7 @@
         android:layout_height="60dp"
         android:hint="Enter Employee Name"
         android:background="@color/white"
-        android:id="@+id/edEmployee"
+        android:id="@+id/edName"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="10dp"/>
 
@@ -74,7 +74,7 @@
             android:layout_marginRight="10dp"/>
 
         <Button
-            android:id="@+id/btUpdate"
+            android:id="@+id/btUp"
             android:layout_width="65dp"
             android:layout_height="match_parent"
             android:layout_weight="3"
@@ -85,7 +85,7 @@
             android:layout_marginRight="10dp"/>
 
         <Button
-            android:id="@+id/btDelete"
+            android:id="@+id/btDel"
             android:layout_width="5dp"
             android:layout_height="match_parent"
             android:layout_weight="3"
